@@ -5,7 +5,7 @@ describe('RemoteAuthentication', () => {
   test('Should call HttpPostClient with correct URL', async () => {
     const url = 'any_url'
     const httpPostClientSpy = new HttpPostClientSpy()
-    const sut = new RemoteAuthentication(url, httpPostClientSpy) // System under test Objeto que está testan
+    const sut = new RemoteAuthentication(url, httpPostClientSpy) // System under test Objeto que está test
     await sut.auth()
     expect(httpPostClientSpy.url).toBe(url)
   })
